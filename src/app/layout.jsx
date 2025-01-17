@@ -2,6 +2,9 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
+import { Searchbar } from "@/components/searchbar";
+import Link from 'next/link';  
+import { Bell, Mail, User2 } from "lucide-react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,11 +29,25 @@ export default function RootLayout({ children }) {
       >
         <SidebarProvider>
           <AppSidebar />
-          <main className="w-full">
+          <main className="">
           <SidebarTrigger />
             {children}
           </main>
         </SidebarProvider>
+        <div className="fixed top-8 right-3 flex items-center gap-12 pr-5">
+          <Searchbar/>
+          <div className="flex items-center gap-6">
+            <Link className="size-[45px] flex items-center justify-center bg-[#E8FCFF] rounded-[10px]" href={'#'}>
+              <Mail size={24} color="#016170"/>
+            </Link>
+            <Link className="size-[45px] flex items-center justify-center bg-[#E8FCFF] rounded-[10px]" href={'#'}>
+              <Bell size={24} color="#016170"/>
+            </Link>
+            <Link className="size-[45px] flex items-center justify-center bg-[#E8FCFF] rounded-[10px]" href={'#'}>
+              <User2 size={24} color="#016170"/>
+            </Link>
+          </div>
+        </div>
       </body>
     </html>
   );
