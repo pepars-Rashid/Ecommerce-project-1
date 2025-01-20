@@ -29,12 +29,12 @@ export default function RootLayout({ children }) {
       >
         <SidebarProvider>
           <AppSidebar />
-          <main className="">
+          <main className="overflow-x-hidden w-full">
           <SidebarTrigger />
             {children}
           </main>
         </SidebarProvider>
-        <div className="fixed top-8 right-3 flex items-center gap-12 pr-5">
+        <div className="fixed top-6 right-3 flex items-center gap-9 pr-4">
           <Searchbar/>
           <div className="flex items-center gap-6">
             <Link className="size-[45px] flex items-center justify-center bg-[#E8FCFF] rounded-[10px]" href={'#'}>

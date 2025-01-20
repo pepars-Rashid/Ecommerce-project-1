@@ -1,9 +1,9 @@
-import { Searchbar } from "@/components/searchbar";
-
+'use client'
+import { ColorPicker } from "@/components/color-picker";
 export default function page() {
   return (
     <div>
-      <Searchbar/>
+      <ColorPicker/>
     </div>
   )
 }
